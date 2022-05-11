@@ -52,7 +52,7 @@
                 <mxCell id="55" value="prefecture_id" style="text;strokeColor=#FFFFFF;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="48">
                     <mxGeometry y="176" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="56" value="days_id" style="text;strokeColor=#FFFFFF;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="48">
+                <mxCell id="56" value="date_id" style="text;strokeColor=#FFFFFF;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="48">
                     <mxGeometry y="206" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="57" value="price" style="text;strokeColor=#FFFFFF;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="48">
@@ -62,7 +62,7 @@
                     <mxGeometry y="266" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="66" value="destinationsテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
-                    <mxGeometry x="90" y="340" width="160" height="236" as="geometry"/>
+                    <mxGeometry x="90" y="340" width="160" height="206" as="geometry"/>
                 </mxCell>
                 <mxCell id="67" value="postcode" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="66">
                     <mxGeometry y="26" width="160" height="30" as="geometry"/>
@@ -81,9 +81,6 @@
                 </mxCell>
                 <mxCell id="72" value="phone_number" style="text;strokeColor=#FFFFFF;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="66">
                     <mxGeometry y="176" width="160" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="73" value="user" style="text;strokeColor=#FFFFFF;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="66">
-                    <mxGeometry y="206" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="85" style="edgeStyle=none;rounded=1;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;startSize=27;endSize=27;sourcePerimeterSpacing=0;strokeColor=default;strokeWidth=1;entryX=-0.031;entryY=0.233;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="39" target="50">
                     <mxGeometry relative="1" as="geometry">

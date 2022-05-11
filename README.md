@@ -27,13 +27,13 @@
 | condition_id       | integer    | null: false                    |
 | delivery_burden_id | integer    | null: false                    |
 | prefecture_id      | integer    | null: false                    |
-| days_id            | integer    | null: false                    |
+| date_id            | integer    | null: false                    |
 | price              | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
-- has_one :orders
+- has_one :order
 
 
 
@@ -42,12 +42,13 @@
 ## destinationsテーブル
 | Column        | Type       | Option                        |
 |---------------|------------|-------------------------------|
-| postcode      | integer(7) | null:false                    |
+| postcode      | string     | null:false                    |
 | prefecture_id | integer    | null:false                    |
 | city          | string     | null:false                    |
 | block         | string     | null:false                    |
 | building      | string     |                               |
-| phone_number  | integer    | null:false                    |
+| phone_number  | string     | null:false                    |
+| order         | references | null:false, foreign_key: true |
 
 ### Association
 - belongs_to :order
