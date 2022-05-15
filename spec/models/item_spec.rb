@@ -55,7 +55,7 @@ RSpec.describe Item, type: :model do
       it 'priceが全角数字では登録できない' do
         @item.price = "１２３４"
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price is not included in the list")
+        expect(@item.errors.full_messages).to include("Price is not a number")
       end
       it 'nameが41文字以上では保存できない' do
         @item.name = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab'
