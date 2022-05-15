@@ -15,6 +15,6 @@ class Item < ApplicationRecord
   validates :delibery_burden_id,numericality: { other_than: 1 , message: "can't be blank"}
   validates :prefecture_id,numericality: { other_than: 1 , message: "can't be blank"}
   validates :shipping_date_id,numericality: { other_than: 1 , message: "can't be blank"}
-  validates :price, presence: true, inclusion: { in: 300..9_999_999 }, format: { with: /\A[0-9]+\z/ }
+  validates :price, presence: true, numericality: { only_integer: true }
   validates :image, presence: true
 end
