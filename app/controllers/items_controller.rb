@@ -4,12 +4,10 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all
     @items = Item.all.order(created_at: :desc)
-
   end
 
   def new
     @item = Item.new
-
   end
 
   def create
@@ -22,7 +20,9 @@ class ItemsController < ApplicationController
   end
 
   private
+
   def item_params
-    params.require(:item).permit(:name, :info, :category_id, :condition_id, :delibery_burden_id, :prefecture_id, :shipping_date_id, :price, :image).merge(user_id: current_user.id)
+    params.require(:item).permit(:name, :info, :category_id, :condition_id, :delibery_burden_id, :prefecture_id,
+                                 :shipping_date_id, :price, :image).merge(user_id: current_user.id)
   end
 end
