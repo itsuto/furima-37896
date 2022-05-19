@@ -42,7 +42,7 @@ RSpec.describe OrderDestination, type: :model do
       it 'phone_numberが空では保存できない' do
         @order_destination.phone_number = ''
         @order_destination.valid?
-        expect(@order_destination.errors.full_messages).to include("Phone number can't be blank")
+        expect(@order_destination.errors.full_messages).to include("Phone number is invalid")
       end
       it 'postcodeは半角のハイフンを含んだ正しい形式でないと保存できない' do
         @order_destination.postcode = '1234567'
