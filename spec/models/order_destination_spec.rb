@@ -22,7 +22,7 @@ RSpec.describe OrderDestination, type: :model do
       it 'postcodeが空では保存できない' do
         @order_destination.postcode = ''
         @order_destination.valid?
-        expect(@order_destination.errors.full_messages).to include("Postcode is invalid. Include hyphen(-)")
+        expect(@order_destination.errors.full_messages).to include('Postcode is invalid. Include hyphen(-)')
       end
       it 'prefecture_idが空では保存できない' do
         @order_destination.prefecture_id = 1
@@ -42,17 +42,17 @@ RSpec.describe OrderDestination, type: :model do
       it 'phone_numberが空では保存できない' do
         @order_destination.phone_number = ''
         @order_destination.valid?
-        expect(@order_destination.errors.full_messages).to include("Phone number is invalid")
+        expect(@order_destination.errors.full_messages).to include('Phone number is invalid')
       end
       it 'postcodeは半角のハイフンを含んだ正しい形式でないと保存できない' do
         @order_destination.postcode = '1234567'
         @order_destination.valid?
-        expect(@order_destination.errors.full_messages).to include("Postcode is invalid. Include hyphen(-)")
+        expect(@order_destination.errors.full_messages).to include('Postcode is invalid. Include hyphen(-)')
       end
       it 'phone_numberは10桁以上11桁以内の半角数値でないと保存できない' do
         @order_destination.phone_number = '080-6777-9876'
         @order_destination.valid?
-        expect(@order_destination.errors.full_messages).to include("Phone number is invalid")
+        expect(@order_destination.errors.full_messages).to include('Phone number is invalid')
       end
       it 'userが紐付いてないと保存できない' do
         @order_destination.user_id = nil
@@ -64,7 +64,7 @@ RSpec.describe OrderDestination, type: :model do
         @order_destination.valid?
         expect(@order_destination.errors.full_messages).to include("Item can't be blank")
       end
-      it "tokenが空では登録できないこと" do
+      it 'tokenが空では登録できないこと' do
         @order_destination.token = nil
         @order_destination.valid?
         expect(@order_destination.errors.full_messages).to include("Token can't be blank")
