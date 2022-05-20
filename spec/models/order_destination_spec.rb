@@ -67,17 +67,17 @@ RSpec.describe OrderDestination, type: :model do
       it 'phone_numberが9桁以下では購入できない' do
         @order_destination.phone_number = '123456789'
         @order_destination.valid?
-        expect(@order_destination.errors.full_messages).to include("Phone number is invalid")
+        expect(@order_destination.errors.full_messages).to include('Phone number is invalid')
       end
       it 'phone_numberが12桁以上では購入できない' do
         @order_destination.phone_number = '123456789876'
         @order_destination.valid?
-        expect(@order_destination.errors.full_messages).to include("Phone number is invalid")
+        expect(@order_destination.errors.full_messages).to include('Phone number is invalid')
       end
       it 'phone_numberに半角数字以外が含まれている場合は購入できない' do
         @order_destination.phone_number = '１２３４５６７８９１０'
         @order_destination.valid?
-        expect(@order_destination.errors.full_messages).to include("Phone number is invalid")
+        expect(@order_destination.errors.full_messages).to include('Phone number is invalid')
       end
     end
   end

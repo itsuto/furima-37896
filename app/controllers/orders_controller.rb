@@ -3,9 +3,9 @@ class OrdersController < ApplicationController
   def index
     @order_destination = OrderDestination.new
     if !user_signed_in?
-     redirect_to new_user_session_path  
+      redirect_to new_user_session_path
     elsif current_user == @item.user || @item.order.present?
-     redirect_to root_path
+      redirect_to root_path
     end
   end
 
